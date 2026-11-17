@@ -1,0 +1,48 @@
+{
+  "verified": false,
+  "verified_at": null,
+  "verification_note": "ไม่สามารถยืนยันกับแหล่งทางการได้ในวันที่สร้างไฟล์ (2026-11-16): ocsc.go.th ตอบ 403, job3.ocsc.go.th ตอบหน้าเปล่า, krisdika.go.th ใบรับรอง SSL ไม่ผ่าน, ratchakitcha.soc.go.th ตอบ 403, เครื่องมือค้นหาติด bot-wall ค่าทั้งหมดเป็นค่าตั้งต้นจากแหล่งข่าว/ข้อมูลทุติยภูมิ ห้ามใช้เป็นอ้างอิงทางการจนกว่าจะตรวจสอบจากประกาศสำนักงาน ก.พ. หรือราชกิจจานุเบกษา แล้วเปลี่ยน verified เป็น true",
+  "sources": [
+    { "url": "https://www.ocsc.go.th/", "note": "primary (attempted)", "result": "HTTP 403", "accessed": "2026-11-16" },
+    { "url": "https://job3.ocsc.go.th/", "note": "primary (attempted)", "result": "empty page", "accessed": "2026-11-16" },
+    { "url": "https://www.krisdika.go.th/", "note": "primary law database (attempted)", "result": "SSL certificate error", "accessed": "2026-11-16" },
+    { "url": "https://www.ratchakitcha.soc.go.th/", "note": "official gazette (attempted)", "result": "HTTP 403", "accessed": "2026-11-16" },
+    { "url": "(PROMPT.md defaults)", "note": "secondary — values copied from project brief, need confirmation", "result": "used as-is with verified:false", "accessed": "2026-11-16" }
+  ],
+  "exam_time_minutes": null,
+  "exam_time_note": "ไม่พบเวลาจากประกาศ — ให้ผู้ใช้ตั้งเองในหน้า Settings (ค่าแนะนำ 180 นาที ไม่ใช่ค่าทางการ)",
+  "choices_per_question": 4,
+  "scoring_per_question": 2,
+  "total_questions": 100,
+  "subjects": {
+    "analytical": {
+      "name_th": "วิชา 1 ความสามารถในการคิดวิเคราะห์",
+      "questions": 50,
+      "max_score": 100,
+      "pass_pct": { "below_bachelor": 60, "bachelor": 60, "master": 65 },
+      "blueprint": { "language": 15, "abstract": 15, "quantitative": 20 },
+      "question_id_code": "S1"
+    },
+    "english": {
+      "name_th": "วิชา 2 ภาษาอังกฤษ",
+      "questions": 25,
+      "max_score": 50,
+      "pass_pct": { "below_bachelor": 50, "bachelor": 50, "master": 50 },
+      "blueprint": { "conversation": 5, "vocabulary": 5, "grammar": 7, "reading": 8 },
+      "question_id_code": "S2",
+      "discrepancy_note": "บางแหล่งกล่าว 20 ข้อ — ยังไม่ยืนยัน (needs_review)"
+    },
+    "civil_knowledge": {
+      "name_th": "วิชา 3 ความรู้และลักษณะการเป็นข้าราชการที่ดี",
+      "questions": 25,
+      "max_score": 50,
+      "pass_pct": { "below_bachelor": 60, "bachelor": 60, "master": 60 },
+      "blueprint": { "public_admin_law": 7, "good_governance": 6, "administrative_procedure": 6, "liability_discipline_ethics": 6 },
+      "question_id_code": "S3",
+      "blueprint_note": "สัดส่วน 4 หมวดกฎหมายเป็นค่าประมาณชั่วคราว — ยังไม่ยืนยันกับประกาศหลักสูตรล่าสุด"
+    }
+  },
+  "pass_rule": "per_subject",
+  "pass_rule_note": "สมมติว่าเกณฑ์ผ่านคิดรายวิชา (ทุกวิชาต้องผ่าน) — ยังไม่ยืนยันว่าเป็นการคิดรวมหรือคิดรายวิชา (needs_review)",
+  "notes": "ค่าทั้งหมดเป็นค่าตั้งต้น ยังไม่ยืนยันจากประกาศทางการ — ดู REVIEW.md"
+}
